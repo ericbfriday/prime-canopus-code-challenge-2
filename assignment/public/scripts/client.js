@@ -15,7 +15,7 @@ function addCat(submitEvent) {
   var catData = {
     name: catName,
     age: catAge
-  }
+  };
   
   console.log('Our new cat data from the form', catData);
   postCat(catData);
@@ -26,6 +26,20 @@ function postCat(cat) {
    * (2) Upon success, call the getCats function to display the updated data.
    * (Optional) If there is an error, call the showFormError function.
    */
+  console.log('posting catData to server.js: ', cat);
+  
+  $.ajax({
+    type: 'POST',
+    url: '/cats',
+    data: cat,
+    success: function (serverResp) {
+        // getCats(serverResp);
+    },
+    error: function (serverResp) {
+      showFormError();
+    }
+  });
+  getCats(); // needed to refresh page after .ajax function
 }
 
 /** ------ GET CAT FUNCTIONS ------ **/

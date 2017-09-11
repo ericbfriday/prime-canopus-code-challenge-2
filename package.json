@@ -4,7 +4,7 @@
   "description": "Suite 2 Checkpoint for AJAX and Express",
   "main": "assignment/server.js",
   "directories": {
-    "test": "test"
+    "test": "tests"
   },
   "scripts": {
     "start": "node assignment/server.js",
@@ -31,7 +31,16 @@
     "supertest": "^3.0.0"
   },
   "dependencies": {
-    "body-parser": "^1.17.2",
-    "express": "^4.15.3"
-  }
+    "body-parser": "^1.18.0",
+    "express": "^4.15.4",
+    "test": "^0.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericbfriday/canopus-code-challenge-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ericbfriday/canopus-code-challenge-2/issues"
+  },
+  "homepage": "https://github.com/ericbfriday/canopus-code-challenge-2#readme"
 }
